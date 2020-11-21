@@ -15,8 +15,8 @@ export default function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/:id">
-              <Profile/>
+            <Route path="/:id">
+              <Profile />
             </Route>
           </Switch>
         </Container>
