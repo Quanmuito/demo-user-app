@@ -51,7 +51,7 @@ export default function Profile() {
                     title='Company'
                     info={{
                         title: user.company.name,
-                        description: user.company.catchPhrase + user.company.bs,
+                        description: user.company.catchPhrase + " / " + user.company.bs,
                     }}
                 />
             </div>
