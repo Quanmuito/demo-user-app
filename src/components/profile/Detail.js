@@ -11,12 +11,10 @@ export default function Detail({ isOpen, title, info }) {
                 <ListGroup.Item key={key}>
                     <div className="row">
                         <div className="col col-lg-3">
-                            <p>{ key }</p>
-                        </div>
-                        <div className="col col-lg-1">
+                            <div className="detail__body-title">{ key.toLocaleUpperCase() }</div>
                         </div>
                         <div className="col">
-                            <p>{ info[key] }</p>
+                            <div className="detail__body-text">{ info[key] }</div>
                         </div>
                     </div>
                 </ListGroup.Item>
@@ -25,9 +23,11 @@ export default function Detail({ isOpen, title, info }) {
     }    
 
     return (
-        <Card>
-            <Card.Header className="d-flex justify-content-between align-items-center">
-                <Card.Title style={ style.cardTitle }>{ title }</Card.Title>
+        <div className="detail">
+            <Card.Header className="detail__header">
+                <Card.Title >
+                    <strong className="detail__header-title">{ title }</strong>
+                </Card.Title>
                 <Button
                     onClick={() => setOpen(!open)}
                     aria-controls="collapse-text"
@@ -38,20 +38,13 @@ export default function Detail({ isOpen, title, info }) {
             </Card.Header>
             <Collapse in={open}>
                 <div id="collapse-text">
-                    <Card.Body>                        
+                    <Card.Body className="detail__body">                        
                         <ListGroup variant="flush">
                             { content }
                         </ListGroup>
                     </Card.Body>
                 </div>
             </Collapse>
-        </Card>
+        </div>
     )
 }
-
-const style = {
-    cardTitle: {
-        margin: '0',
-        fontSize: '1.5rem'
-    }
-};

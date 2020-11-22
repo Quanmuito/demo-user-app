@@ -1,33 +1,31 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header, Footer } from './layouts';
+import { Header, Footer } from './components/layouts/Layouts';
 import { Container } from 'react-bootstrap';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
 
 export default function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Container style={ style.container }>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/:id">
-              <Profile />
-            </Route>
-          </Switch>
+    <>
+      <Header />
+      <div className="App">      
+        <Container>
+
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/:id">
+                <Profile />
+              </Route>
+            </Switch>
+          </Router>
+          
         </Container>
-        <Footer />
-      </div>      
-    </Router>    
+      </div>
+      <Footer />
+    </>
   );
 }
-
-const style = {
-  container: {
-    marginBottom: '10vh'
-  }
-};

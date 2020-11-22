@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import {  } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import './styleProfile.scss';
 import Picture from './Picture';
 import Detail from './Detail';
 
 export default function Profile() {    
     const { id } = useParams();
-    console.log(id);
     const [user, setUser] = useState([]);
-    console.log(user);
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
@@ -25,11 +23,11 @@ export default function Profile() {
                     isOpen={true}
                     title='Personal information'
                     info={{
-                        Name: user.name,
-                        Username: user.username,
-                        Email: user.email,
-                        Phone: user.phone,
-                        Website: user.website
+                        name: user.name,
+                        username: user.username,
+                        email: user.email,
+                        phone: user.phone,
+                        website: user.website
                     }}
                 />
                 
@@ -39,10 +37,10 @@ export default function Profile() {
                     isOpen={false}
                     title='Address'
                     info={{
-                        Street: user.address.street,
-                        Suite: user.address.suite,
-                        City: user.address.city,
-                        Zipcode: user.address.zipcode
+                        street: user.address.street,
+                        suite: user.address.suite,
+                        city: user.address.city,
+                        zipcode: user.address.zipcode
                     }}
                 />
 
@@ -52,8 +50,8 @@ export default function Profile() {
                     isOpen={false}
                     title='Company'
                     info={{
-                        Title: user.company.name,
-                        Description: user.company.catchPhrase + user.company.bs,
+                        title: user.company.name,
+                        description: user.company.catchPhrase + user.company.bs,
                     }}
                 />
             </div>

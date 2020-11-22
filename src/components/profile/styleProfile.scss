@@ -1,0 +1,88 @@
+.picture {
+	&__cover {
+		height: 14rem;
+		background: #b39ddb 0% 0% no-repeat padding-box;
+	}
+
+	&__avatar {
+		position: relative;
+		top: -6rem;
+		width: 12.5rem;
+		height: 12.5rem;
+		margin: auto;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #484e9b 0% 0% no-repeat padding-box;
+
+		&-text {
+			width: 5rem;
+			text-align: center;
+			font: normal normal 900 80px/94px "Roboto";
+			letter-spacing: 2px;
+			color: #ffffff;
+		}
+	}
+
+	&__name {
+		position: relative;
+		top: -5rem;
+		text-align: center;
+		font: normal normal 700 32px/38px "Roboto";
+		letter-spacing: 2px;
+		color: #4a4a4a;
+	}
+}
+
+.detail {
+	position: relative;
+	top: -5rem;
+	border: 3px solid #efefef;
+	border-radius: 13px;
+	padding: 1rem;
+	box-shadow: 0px 2px 6px #00000029;
+	display: flex;
+	flex-direction: column;
+	word-wrap: break-word;
+	text-align: center;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	background-clip: border-box;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: #ffffff 0% 0% no-repeat padding-box !important;
+
+		&-title {
+			padding-left: 2rem;
+			font: normal normal 900 25px/34px "Open Sans";
+			letter-spacing: 0.75px;
+			color: #212121;
+		}
+	}
+
+	&__body {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+
+		&-title {
+			margin: 0.5rem 0;
+			padding-left: 1rem;
+			text-align: left;
+			font: normal normal normal 20px/27px "Open Sans";
+			letter-spacing: 0.6px;
+			color: #939393;
+		}
+
+		&-text {
+			margin: 0.5rem 0;
+			padding-left: 7rem;
+			text-align: left;
+			font: normal normal normal 23px/27px "Roboto";
+			letter-spacing: 0.69px;
+			color: #000000;
+		}
+	}
+}

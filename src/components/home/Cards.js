@@ -1,57 +1,37 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 export default function Cards({ user }) {
     return (
-        <Card style={ style.card }>            
-            <div style={ style.img } className="d-flex justify-content-center align-items-center">
-                <div style={ style.img_text }>{ user.name.charAt(0) }</div>
+        <Card className="card">            
+            <div className="card__img">
+                <div className="card__img-text">{ user.name.charAt(0) }</div>
             </div>
-            <Card.Body>
-                <Card.Title>
+            <Card.Body className="card__body">
+                <div className="card__body-title">
                     { user.name }
-                </Card.Title>
+                </div>
 
-                <Card.Subtitle className="mb-2 text-muted">
+                <div className="card__body-subtitle">
                     @{ user.username }
-                </Card.Subtitle>
+                </div>
 
-                <Card.Text>
-                    <a href={ user.website }>{ user.website }</a>
-                </Card.Text>
                 
+                <div className="card__body-text">
+                    <a href={"/" + user.id}>
+                        {user.website}
+                    </a>
+                </div>
+                
+
                 <a href={ "/" + user.id }>
-                    <Button style={ style.button } variant="primary">
-                        View User Profile
-                    </Button>
+                    <div className="card__body-button">
+                        <div className="card__body-button-text">
+                            MORE DETAILS
+                        </div>
+                    </div>
                 </a>
             </Card.Body>
         </Card>
     )
 }
-
-const style = {
-    card: {
-        width: '18rem',
-        padding: '1rem',
-        textAlign: 'center',
-        boxShadow: '2px 2px 2px grey'
-    },
-    img: {
-        position: 'relative',
-        width: '150px',
-        height: '150px',
-        margin: 'auto',
-        borderRadius: '50%',
-        backgroundColor: 'grey',
-    },
-    img_text: {
-        width: '5rem',        
-        fontSize: '5rem',
-        textAlign: 'center',
-        color: 'white'
-    },
-    button: {
-        width: '100%',
-    }    
-};

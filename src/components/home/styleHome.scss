@@ -1,0 +1,96 @@
+.home {
+	&__title {
+		padding-top: 5vh;
+		padding-bottom: 2vh;
+
+		h1 {
+			text-align: center;
+			font: "Roboto";
+			letter-spacing: 2.5px;
+		}
+	}
+
+	&__col {
+		margin: 1rem;
+	}
+
+	.card {
+		width: 18rem;
+		border-radius: 8px !important;
+		padding: 1rem;
+		box-shadow: 0px 2px 6px #00000029;
+		text-align: center;
+		background: #fcfcfc 0% 0% no-repeat padding-box;
+
+		&:hover {
+			box-shadow: 0px 2px 15px #00000029;
+		}
+
+		&__img {
+			position: relative;
+			width: 9rem;
+			height: 9rem;
+			margin: auto;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #f4f4f4 0% 0% no-repeat padding-box;
+
+			&:hover {
+				box-shadow: 0px 1px 6px #00000029;
+				background: #eeeeee 0% 0% no-repeat padding-box;
+			}
+
+			&-text {
+				width: 5rem;
+				padding: 1rem;
+				text-align: center;
+				font: normal normal 900 70px/82px "Roboto";
+				letter-spacing: 1.75px;
+				color: #a0a0a0;
+			}
+		}
+
+		&__body {
+			&-title {
+				height: 23px;
+				font: normal normal 900 23px/27px "Roboto";
+				letter-spacing: 0.57px;
+				color: #5e5e5e;
+				overflow: hidden;
+			}
+
+			&-subtitle {
+				margin-top: 0.5rem;
+				font: italic normal normal 18px/24px "Open Sans";
+				letter-spacing: 0px;
+				color: #000000;
+			}
+
+			&-text {
+				margin: 1rem;
+				font: normal normal normal 16px/22px "Open Sans";
+				letter-spacing: 0px;
+				color: #2147e6;
+			}
+
+			&-button {
+				height: 3rem;
+				margin-top: 2rem;
+				border: 1px solid #3195ff;
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #5cabff 0% 0% no-repeat padding-box;
+
+				&-text {
+					font: normal normal normal 18px/22px "Montserrat";
+					letter-spacing: 0.54px;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
